@@ -2,7 +2,4 @@
 
 import { cli } from "../src/cli.js";
 
-// require = require("esm")(module /*, options*/);
-// require("../src/cli").cli(process.argv);
-
 cli(process.argv);
