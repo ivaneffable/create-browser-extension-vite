@@ -4,6 +4,8 @@ A CLI for Creating Browser Extensions with TypeScript
 
 ## Quick Start
 
+<img src="https://github.com/ivaneffable/create-browser-extension-vite/blob/main/screenshot.png?raw=true" width="500">
+
 ### Basic Usage
 
 To create a new browser extension project:
