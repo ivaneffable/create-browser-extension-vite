@@ -12,10 +12,10 @@ function showHelpIfRequested(options) {
         $ create-browser-extension-vite <project-name>
 
       Options
-        --git          Initialize a git repository
-        --yes          Skip prompts
-        --install      Install dependencies
-        --help         Display this message
+        --git, -g          Initialize a git repository
+        --yes, -y          Skip prompts
+        --install, -i      Install dependencies
+        --help, -h         Display this message
     `)
     );
     process.exit(0);
