@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import ncp from "ncp";
+import fs from "fs";
 import path from "path";
 import { promisify } from "util";
 import { execa } from "execa";
@@ -9,9 +10,13 @@ import { projectInstall } from "pkg-install";
 const copy = promisify(ncp);
 
 async function copyTemplateFiles(options) {
-  return copy(options.templateDirectory, options.targetDirectory, {
+  await copy(options.templateDirectory, options.targetDirectory, {
     clobber: false,
   });
+  await fs.promises.rename(
+    `${options.projectName}/gitignore.tmp`,
+    `${options.projectName}/.gitignore`
+  );
 }
 
 async function initGit(options) {
